@@ -1,0 +1,530 @@
+:root{
+    --maxWidth: 1208px;
+    --roboto: "Roboto", sans-serif;
+    --rochester: "Rochester", cursive;
+    --blanco: #FAFAF9;
+    --crema100: #f7ebe0;
+    --verdeWpp: #3EBA54;
+    --marronMarca: #b58456;
+    --marronAside: #ab835d;
+    --negroMarca: #302E2C;
+    --igColor1: #E1306C;
+    --layoutBg: #fffefc;
+    --boxShadowSettings: 0 20px 12px rgba(0, 0, 0, 0.25);
+}
+
+html{
+    font-size: 10px;
+}
+
+.layout{
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--layoutBg);
+
+    overflow-x: hidden;
+}
+
+/* --------------GENERALES/COMPARTIDOS-------------- */
+.layout__nosotros,
+.productos__containerGaleria{
+    max-width: var(--maxWidth);
+}
+
+.layout__nosotros,
+.layout__productos,
+.layout__sucursales{
+    padding: 24px 0;
+}
+
+.nosotros__title,
+.productos__title,
+.sucursales__title{
+    font-family: var(--roboto);
+    font-size: 40px;
+    color: var(--negroMarca);
+}
+
+.direccion__link,
+.horario__title,
+.horario__dias,
+.horario__horas,
+.footer__instagram,
+.footer__sucursales{
+    text-align: center;
+}
+
+.footer__direcciones,
+.footer__horario{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* --------------BANNER-------------- */
+
+.layout__banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/Img/fondoFiltro.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner__logoContainer{
+    width: 632px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner__subtitle{
+    font-size: 64px;
+    width: 472px;
+    text-align: center;
+    font-family: var(--rochester);
+    font-weight: 400;
+    color: var(--negroMarca);
+    text-shadow: 0 0 10px var(--blanco);
+}
+
+/* --------------NOSOTROS-------------- */
+
+.layout__nosotros{
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+    align-items: center;
+}
+
+.nosotros__container{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.nosotros__descripcion{
+    font-family: var(--roboto);
+    font-size: 20px;
+    text-align: justify;
+    flex: 1;
+    flex-basis: 200px;
+    color: var(--negroMarca);
+}
+
+.nosotros__img{
+    flex: 1;
+    flex-basis: 200px;
+    background-image: url(/Img/nosotros1Filtro.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* --------------PRODUCTOS-------------- */
+
+.layout__productos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 47px;
+    background-color: var(--crema100);
+    background-image: url(/Img/patronFondo.svg);
+    background-repeat: repeat;
+}
+
+.productos__containerGaleria{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    height: 438px;
+}
+
+.productos__galeriaDulce,
+.productos__galeriaSalada{
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.galeriaDulce__text,
+.galeriaSalada__text{
+    font-family: var(--rochester);
+    font-weight: 400;
+    font-size: 64px;
+    text-align: center;
+    background-color: transparent;
+    width: 100%;
+    text-shadow: 0 0 10px var(--blanco);
+    transition: all 300ms ease-in-out;
+}
+
+.productos__galeriaDulce:hover .galeriaDulce__text,
+.productos__galeriaSalada:hover .galeriaSalada__text{
+    background-color: var(--blanco);
+}
+
+.productos__linkDulce,
+.productos__linkSalado{
+    flex: 1;
+    height: 100%;
+}
+
+.productos__galeriaDulce{
+    background-image: url(/Img/productosDulce2Filtro.jpg);
+    background-color: rgb(213 204 188 / 10%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+
+    clip-path: inset(0 0 0 0);
+    
+    transition: all 300ms ease-in-out;
+}
+
+.productos__galeriaDulce:hover{
+    border-radius: 0;
+    clip-path: inset(0 0 0 0 round 28% 0);
+}
+
+.productos__galeriaSalada{
+    background-image: url(/Img/productosSaladoFiltro.jpg);
+    background-color: rgb(213 204 188 / 10%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    
+    clip-path: inset(0 0 0 0);
+    
+    transition: all 300ms ease-in-out;
+}
+
+.productos__galeriaSalada:hover{
+    border-radius: 0;
+    clip-path: inset(0 0 0 0 round 0 28%);
+}
+
+/* --------------SUCURSALES-------------- */
+.layout__sucursales{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    padding-bottom: 40px;
+}
+
+.sucursales__sucursalContainer{
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 30px;
+    overflow: hidden;
+    height: 438px;
+    box-shadow: var(--boxShadowSettings);
+    
+    transition: all 300ms ease-in-out;
+}
+
+.sucursales__sucursalContainer:hover{
+    transform: scale(1.02);
+}
+
+.sucursales__sucursal{
+    flex: 1;
+    background-color: var(--crema100);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.sucursal__nombre{
+    font-family: var(--rochester);
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--negroMarca);
+}
+
+.sucursal__ubicacion{
+    font-family: var(--roboto);
+    font-size: 20px;
+    text-decoration: underline;
+    color: var(--negroMarca);
+}
+
+.sucursal__telefono{
+    font-family: var(--roboto);
+    font-size: 20px;
+    color: var(--negroMarca);
+}
+
+.sucursal__btn{
+    font-family: var(--roboto);
+    font-size: 20px;
+    color: var(--blanco);
+    background-color: var(--verdeWpp);
+    border: 2px solid var(--blanco);
+    padding: 16px 40px;
+    border-radius: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.sucursal__btn:hover{
+    color: var(--verdeWpp);
+    background-color: var(--blanco);
+    border: 2px solid var(--verdeWpp);
+}
+
+.sucursal__map{
+    flex: 1;
+    height: 100%;
+}
+
+.sucursales__sucursal--vdp{
+    order: 2;
+}
+
+.sucursal__map--vdp{
+    order: 1;
+}
+
+.sucursales__sucursal--belgrano{
+    order: 2;
+}
+
+.sucursal__map--belgrano{
+    order: 1;
+}
+
+/* --------------FOOTER-------------- */
+.footer{
+    width: 100%;
+    background-color: var(--marronMarca);
+    /* clip-path: polygon(0 0, 100% 4%, 100% 100%, 0% 100%) */
+}
+
+.footer__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
+}
+
+.footer__imgContainer{
+    width: 195px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+}
+
+.footer__direcciones,
+.footer__horario,
+.footer__instagram,
+.footer__sucursales{
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: var(--blanco);
+}
+
+.footer__redesContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer__instagram{
+    background: var(--igColor1);
+    border: 2px solid var(--blanco);
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+.footer__instagram:hover{
+    background-color: #C13584;
+}
+
+.footer__sucursales{
+    padding: 10px 20px;
+    text-align: center;
+    background-color: var(--verdeWpp);
+    border-radius: 30px;
+    border: 2px solid var(--blanco);
+    transition: all 300ms ease-in-out;
+}
+
+.footer__sucursales:hover{
+    border: 2px solid var(--verdeWpp);
+    background-color: var(--blanco);
+    color: var(--verdeWpp);
+}
+
+/* ----------------------RESPONSIVE---------------------- */
+
+@media (max-width: 1439px) {
+    .layout__nosotros,
+    .layout__productos,
+    .layout__sucursales,
+    .footer{
+        padding: 24px 40px;
+    }
+
+    .banner__logoContainer{
+        width: 402px;
+    }
+
+    .banner__subtitle{
+        font-size: 48px;
+        width: 402px;
+    }
+
+    .layout__sucursales{
+        padding-bottom: 40px;
+    }
+
+    .footer{
+        padding: 40px;
+    }
+
+    .footer__container{
+        justify-content: space-between;
+    }
+
+    .footer__imgContainer{
+        width: 150px;
+    }
+
+    .direccion__link, 
+    .horario__title, 
+    .horario__dias, 
+    .horario__horas{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nosotros__title,
+    .productos__title,
+    .sucursales__title{
+        font-size: 32px;
+    }
+
+    .galeriaDulce__text,
+    .galeriaSalada__text{
+        font-size: 40px;
+    }
+
+    .banner__logoContainer{
+        width: 44%;
+    }
+
+    .banner__subtitle{
+        width: 402px;
+        font-size: 48px;
+    }
+
+    .nosotros__descripcion{
+        font-size: 16px;
+    }
+
+    .productos__containerGaleria{
+        height: 328px;
+    }
+
+    .sucursales__sucursalContainer{
+        height: 348px;
+    }
+
+    .sucursales__sucursal{
+        gap: 20px;
+    }
+
+    .sucursal__nombre{
+        font-size: 32px;
+    }
+    .sucursal__ubicacion,
+    .sucursal__telefono,
+    .sucursal__btn{
+        font-size: 16px;
+    }
+
+    .direccion__link,
+    .horario__title,
+    .horario__dias,
+    .horario__horas,
+    .footer__instagram,
+    .footer__sucursales{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .layout__nosotros,
+    .layout__productos,
+    .layout__sucursales,
+    .footer{
+        padding: 24px 24px;
+    }
+
+    .banner__logoContainer{
+        width: 300px;
+    }
+
+    .banner__subtitle {
+        width: 354px;
+        font-size: 42px;
+    }
+
+    .nosotros__container{
+        flex-direction: column;
+        min-height: 400px;
+    }
+
+    .nosotros__descripcion{
+        display: flex;
+        align-items: center;
+    }
+
+    .productos__containerGaleria{
+        flex-direction: column;
+        height: 438px;
+    }
+
+    .sucursal__map{
+        display: none;
+    }
+
+    .layout__sucursales{
+        width: 100%;
+    }
+
+    .sucursales__sucursalContainer{
+        width: 100%;
+    }
+
+    .footer__container{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer__imgContainer{
+        display: none;
+    }
+}

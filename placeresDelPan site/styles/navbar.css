@@ -1,0 +1,206 @@
+/* ----------------------Aside---------------------- */
+.layout__asideNav{
+    font-family: var(--roboto);
+    font-size: 16px;
+    background-color: var(--marronAside);
+    height: 100%;
+    max-width: 280px;
+    width: 60%;
+    padding: 36px;
+    
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 11;
+
+    border-radius: 30px 0 0 30px;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(280px);
+    
+    transition: all 300ms ease-in-out;
+}
+
+.aside__visible{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.asideNav__menu{
+    color: var(--blanco);
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    padding: 24px;
+    text-align: center;
+}
+
+.aside__sucursales{
+    margin-top: 78px;
+    font-family: var(--roboto);
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--blanco);
+    padding: 10px 20px;
+    text-align: center;
+    background-color: var(--verdeWpp);
+    border-radius: 30px;
+    border: 2px solid var(--blanco);
+    transition: all 300ms ease-in-out;
+}
+
+/* ----------------------Navbar---------------------- */
+
+.nav__logo{
+    display: block;
+    width: 80px;
+}
+
+.layout__nav{
+    display: flex;
+    justify-content: space-evenly;
+
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+
+    z-index: 10;
+
+    padding: 16px 0;
+
+    background-color: transparent;
+    transition: all 300ms ease-in-out;
+}
+
+.scrolled{
+    background-color: var(--marronMarca);
+}
+
+.nav__menu{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 74px;
+}
+
+.nav__link{
+    font-family: var(--roboto);
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--blanco);
+}
+
+.nav__crossContainer{
+    display: none;
+    flex-direction: column;
+    
+    justify-content: space-between;
+}
+
+.nav__crossLinea--1,
+.nav__crossLinea--2,
+.nav__crossLinea--3{
+    transition: all 300ms ease-in-out;
+    transform-origin: left;
+}
+
+.clicked1{
+    transform: rotate(42deg);
+}
+
+.clicked2{
+    opacity: 0;
+}
+
+.clicked3{
+    transform: rotate(-42deg);
+}
+
+.nav__crossLinea{
+    background-color: var(--blanco);
+    border-radius: 3px;
+    width: 30px;
+    height: 4px;
+}
+
+.nav__link,
+.asideNav__link{
+    position: relative;
+}
+
+.nav__link::before,
+.asideNav__link::before{
+    content: "";
+
+    background-color: var(--blanco);
+
+    width: 0;
+    height: 2px;
+    opacity: 0;
+
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+
+    transition: all 100ms linear;
+}
+
+.nav__link:hover::before,
+.asideNav__link:hover::before{
+    width: 100%;
+    opacity: 1;
+}
+
+.navbar__sucursales{
+    font-family: var(--roboto);
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--blanco);
+    padding: 10px 20px;
+    text-align: center;
+    background-color: var(--verdeWpp);
+    border-radius: 30px;
+    border: 2px solid var(--blanco);
+    transition: all 300ms ease-in-out;
+}
+
+.navbar__sucursales:hover{
+    border: 2px solid var(--verdeWpp);
+}
+
+@media (max-width: 767px){
+    .layout__nav{
+        justify-content: space-between;
+        padding: 16px 24px;
+    }
+
+    .nav__menu{
+        display: none;
+    }
+
+    .navbar__sucursales{
+        display: none;
+    }
+
+    .nav__name{
+        display: block;
+    }
+
+    .nav__crossContainer{
+        display: flex;
+
+        padding: 16px;
+        padding-right: 24px;
+        height: 56px;
+
+        position: fixed;
+        right: 0;
+        top: 8px;
+        z-index: 20;
+    }
+}
