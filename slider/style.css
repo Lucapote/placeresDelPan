@@ -1,0 +1,39 @@
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.section{
+    background-color: green;
+    padding: 0 40px;
+    max-width: 1208px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+.carrousel{
+    background-color: brown;
+    width: fit-content;
+    height: 130px;
+    overflow: hidden;
+}
+
+.carrousel__via{
+    width: 200px;
+    background-color: yellow;
+    transform: translateY(-200px);
+
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .carrousel__via{
+        width: fit-content;
+    }    
+}
