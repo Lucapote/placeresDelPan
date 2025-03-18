@@ -78,6 +78,8 @@ window.addEventListener("scroll", ()=>{
     }else{
         navBar.classList.remove("scrolled")
         if(!index){
+            console.log(index);
+            
             navLink.forEach(link => link.style.color = "#302E2C")
             navLinea.forEach(linea => linea.style.backgroundColor = "#302E2C")
             navLogo.setAttribute("src", "/Img/soloLetrasNegras.svg")
