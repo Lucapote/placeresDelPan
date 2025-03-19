@@ -33,6 +33,14 @@
     flex-direction: row;
 }
 
+.nosotrosPg__texto--left{
+    order: 2;
+}
+
+.nosotrosPg__imgContainer--left{
+    order: 1;
+}
+
 .nosotrosPg__imgContainer{
     min-height: 348px;
     max-height: 100%;

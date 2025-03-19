@@ -210,5 +210,10 @@ body{
 
     .galeria__clipPath{
         clip-path: none;
+        animation: none;
+    }
+
+    .galeria__textContainer .galeria__clipPath:hover{
+        clip-path: none;
     }
 }
