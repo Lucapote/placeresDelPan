@@ -110,38 +110,6 @@ body{
     font-size: 18px;
 }
 
-/* .img1{
-    background-image: url(/Img/galeriaDulce1Filtro.jpeg);
-}
-
-.img2{
-    background-image: url(/Img/galeriaDulce2Filtro.jpeg);
-}
-
-.img3{
-    background-image: url(/Img/galeriaDulce3Filtro.jpeg);
-}
-
-.img4{
-    background-image: url(/Img/galeriaDulce4Filtro.jpeg);
-}
-
-.img5{
-    background-image: url(/Img/galeriaDulce5Filtro.jpeg);
-}
-
-.img6{
-    background-image: url(/Img/galeriaDulce6Filtro.jpeg);
-}
-
-.img7{
-    background-image: url(/Img/galeriaDulce7Filtro.jpeg);
-}
-
-.img8{
-    background-image: url(/Img/galeriaDulce8Filtro.jpeg);
-} */
-
 /* --------------RESPONSIVE--------------- */
 
 @media (max-width: 1439px){
@@ -187,8 +155,18 @@ body{
         flex: 2;
     }
 
+    @keyframes clipPathAnimation {
+        0% {
+            clip-path: polygon(12% 0, 100% 0, 88% 100%, 0% 100%);
+        }
+        100% {
+            clip-path: polygon(0% 0, 88% 0, 100% 100%, 12% 100%);
+        }
+    }
+
     .galeria__clipPath{
         clip-path: polygon(12% 0, 100% 0, 88% 100%, 0% 100%);
+        animation: clipPathAnimation 5s ease-in-out infinite alternate;
     }
     
     .galeria__textContainer .galeria__clipPath:hover{
