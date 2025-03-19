@@ -433,7 +433,7 @@ html{
     }
 
     .footer__container{
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .footer__imgContainer{
